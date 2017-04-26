@@ -1,0 +1,20 @@
+exp = experimento, execution = 1, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41774827, OMP = 194334699
+exp = experimento, execution = 2, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41458983, OMP = 194209242
+exp = experimento, execution = 3, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41429631, OMP = 194624738
+exp = experimento, execution = 4, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41421901, OMP = 193151302
+exp = experimento, execution = 5, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 40030117, OMP = 194099520
+exp = experimento, execution = 6, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41470736, OMP = 194394078
+exp = experimento, execution = 7, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41367560, OMP = 192796244
+exp = experimento, execution = 8, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41357933, OMP = 193987224
+exp = experimento, execution = 9, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 40618985, OMP = 193736275
+exp = experimento, execution = 10, benchmark = vectoradd, size_of_data = 8388608, schedule = STATIC, chunk_size = 256, num_threads = 1,
+version = OMP, num_threads = 1, N = 8388608, ORIG = 41736101, OMP = 194217367

@@ -1,0 +1,33 @@
+exp,execution,benchmark,size_of_data,schedule,chunk_size,num_threads,version,num_threads,N,ORIG,OMP
+experimento,1,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,52102189,"30620890
+exp = experimento"
+experimento,3,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40680633,"29264554
+exp = experimento"
+experimento,5,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41578599,"29440088
+exp = experimento"
+experimento,7,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40854944,"29231568
+exp = experimento"
+experimento,9,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41100484,"29395336
+exp = experimento"
+exp,execution,benchmark,size_of_data,schedule,chunk_size,num_threads,version,num_threads,N,ORIG,OMP
+experimento,1,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,52102189,
+experimento,2,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41117765,
+experimento,3,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40680633,
+experimento,4,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40430940,
+experimento,5,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41578599,
+experimento,6,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40776035,
+experimento,7,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40854944,
+experimento,8,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41228010,
+experimento,9,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41100484,
+experimento,10,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41578100,
+exp,execution,benchmark,size_of_data,schedule,chunk_size,num_threads,version,num_threads,N,ORIG,OMP
+experimento,1,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,52102189,30620890
+experimento,2,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41117765,29309437
+experimento,3,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40680633,29264554
+experimento,4,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40430940,31585379
+experimento,5,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41578599,29440088
+experimento,6,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40776035,30639861
+experimento,7,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,40854944,29231568
+experimento,8,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41228010,30060635
+experimento,9,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41100484,29395336
+experimento,10,vectoradd,8388608,GUIDED,256,8,OMP,8,8388608,41578100,29326341

@@ -1,0 +1,20 @@
+exp = experimento, execution = 1, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 41529531, OMP = 28832957
+exp = experimento, execution = 2, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 41019553, OMP = 28824036
+exp = experimento, execution = 3, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 41423818, OMP = 28911532
+exp = experimento, execution = 4, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 40156953, OMP = 28935719
+exp = experimento, execution = 5, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 40677701, OMP = 28954808
+exp = experimento, execution = 6, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 40695531, OMP = 28730612
+exp = experimento, execution = 7, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 41345475, OMP = 28908874
+exp = experimento, execution = 8, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 42640300, OMP = 28828834
+exp = experimento, execution = 9, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 41619352, OMP = 29123915
+exp = experimento, execution = 10, benchmark = vectoradd, size_of_data = 8388608, schedule = GUIDED, chunk_size = 16, num_threads = 2,
+version = OMP, num_threads = 2, N = 8388608, ORIG = 43651337, OMP = 28886965

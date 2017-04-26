@@ -1,0 +1,20 @@
+exp = experimento, execution = 1, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 41560678, OMP = 32074002
+exp = experimento, execution = 2, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 41917920, OMP = 37307465
+exp = experimento, execution = 3, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 41405745, OMP = 32969952
+exp = experimento, execution = 4, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 41251161, OMP = 33045671
+exp = experimento, execution = 5, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 41546580, OMP = 32384646
+exp = experimento, execution = 6, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 40099754, OMP = 41184519
+exp = experimento, execution = 7, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 45507441, OMP = 30847536
+exp = experimento, execution = 8, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 40995450, OMP = 31982774
+exp = experimento, execution = 9, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 40830749, OMP = 31988159
+exp = experimento, execution = 10, benchmark = vectoradd, size_of_data = 8388608, schedule = DYNAMIC, chunk_size = 256, num_threads = 4,
+version = OMP, num_threads = 4, N = 8388608, ORIG = 40670634, OMP = 32029771
