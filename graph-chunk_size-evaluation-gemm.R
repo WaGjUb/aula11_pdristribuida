@@ -69,7 +69,9 @@ setwd("/home/todos/alunos/cm/a1625381/Área de trabalho/aula11");
 data = read.csv("./src/codigo-suporte/terreno.csv");
 View(data)
 
-cdata <- ddply(data, c("exp","execution","benchmark", "size_of_data", "schedule", "chunk_size", "num_threads", "version", "num_threads", "N", "ORIG", "OMP"), summarise,
+data <- subset(data, schedule == "DYNAMIC")
+
+cdata <- ddply(data, c("exp", "version", "schedule",  "chunk_size", "num_threads", "size_of_data"), summarise,
                    N    = length(chunk_size),
                    mean_orig = mean(ORIG),
                    mean_omp = mean(OMP),
@@ -200,7 +202,6 @@ p2 <- ggplot(df_plot_32, aes(x=x, y=t, fill=cat)) +
 (p2 = p2 + scale_fill_grey(start = 0.9, end = 0.2))
 
 multiplot(p2, cols=1)
-dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-32.pdf");
 # dev.off ();
 
 # Chunk size 64.
