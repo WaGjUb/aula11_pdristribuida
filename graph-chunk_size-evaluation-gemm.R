@@ -69,7 +69,7 @@ setwd("/home/todos/alunos/cm/a1625381/Área de trabalho/aula11");
 data = read.csv("./src/codigo-suporte/terreno.csv");
 View(data)
 
-data <- subset(data, schedule == "DYNAMIC")
+data <- subset(data, schedule == "DYNAMIC" & size_of_data == 1048576)
 
 cdata <- ddply(data, c("exp", "version", "schedule",  "chunk_size", "num_threads", "size_of_data"), summarise,
                    N    = length(chunk_size),
@@ -299,6 +299,7 @@ p5 <- ggplot(df_plot_256, aes(x=x, y=t, fill=cat)) +
                 size=.5,    # Thinner lines
                 width=.4,
                 position=position_dodge(.9)) + 
+ 
   xlab("Number of Threads") +
   ylab("Time(ms)") +
   #scale_fill_manual(name="Experiment", # Legend label, use darker colors
