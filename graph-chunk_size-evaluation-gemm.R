@@ -62,14 +62,14 @@ insertRow <- function(existingDF, newrow, r) {
 }
 
 ##meus dados
-setwd("/home/todos/alunos/cm/a1625381/Área de trabalho/aula11");
+setwd("/home/todos/alunos/cm/a1625381/Área de trabalho/aula11_pdristribuida");
 
 # Load data about OMP, CUDA, OMP_OFF.
 ##abre dados do csv
 data = read.csv("./src/codigo-suporte/terreno.csv");
 View(data)
 
-data <- subset(data, schedule == "DYNAMIC" & size_of_data == 1048576)
+data <- subset(data, schedule == "STATIC" & size_of_data == 8388608)
 
 cdata <- ddply(data, c("exp", "version", "schedule",  "chunk_size", "num_threads", "size_of_data"), summarise,
                    N    = length(chunk_size),
@@ -112,6 +112,8 @@ cdata <- ddply(data, c("exp", "version", "schedule",  "chunk_size", "num_threads
                   # sum_made_the_offloading = sum(MADE_THE_OFFLOADING)
 )
 
+
+
 View(cdata)
 
 # Prepare column to plot.
@@ -141,7 +143,7 @@ View(df_plot_16)
 # View(df_plot)
 
 #pdf(filename="evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-16.pdf", width=1200, height=800);
-
+png("img16.png")
 p1 <- ggplot(df_plot_16, aes(x=x, y=t, fill=cat)) + 
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar(aes(ymin=t-t_sd, ymax=t+t_sd),
@@ -153,7 +155,7 @@ p1 <- ggplot(df_plot_16, aes(x=x, y=t, fill=cat)) +
   #scale_fill_manual(name="Experiment", # Legend label, use darker colors
   #           breaks=c("OMP+OFF", "OMP"),
   #           labels=c("OMP+OFF", "OMP"), values=c("#494949", "#927080", "#B6B6B6")) +
-  ggtitle("Offloading Analysis for gemm (Number of Threads with chunk_size = 16)\n") +
+  ggtitle("(Number of Threads with chunk_size = 16)\n") +
   # scale_y_continuous(trans='log') +
   scale_y_continuous() +
   # scale_y_log10() +
@@ -162,10 +164,9 @@ p1 <- ggplot(df_plot_16, aes(x=x, y=t, fill=cat)) +
   theme(legend.position=c(0.9,0.89), legend.title=element_blank(), plot.title = element_text(size=20))
 
 (p1 = p1 + scale_fill_grey(start = 0.9, end = 0.2))
-
 multiplot(p1, cols=1)
-#####dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-16.pdf");
-# dev.off ();
+#dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-16.pdf");
+ dev.off ();
 
 # Chunk size 32.
 #df_plot_32 <- subset(df_data, y== 32 | y == 0)
@@ -179,7 +180,7 @@ View(df_plot_32)
 # View(df_plot)
 
 #pdf(filename="evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-32.pdf", width=1200, height=800);
-
+png("img32.png")
 p2 <- ggplot(df_plot_32, aes(x=x, y=t, fill=cat)) + 
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar(aes(ymin=t-t_sd, ymax=t+t_sd),
@@ -191,7 +192,7 @@ p2 <- ggplot(df_plot_32, aes(x=x, y=t, fill=cat)) +
   #scale_fill_manual(name="Experiment", # Legend label, use darker colors
   #           breaks=c("OMP+OFF", "OMP"),
   #           labels=c("OMP+OFF", "OMP"), values=c("#494949", "#927080", "#B6B6B6")) +
-  ggtitle("Offloading Analysis for gemm (Number of Threads with chunk_size = 32)\n") +
+  ggtitle("(Number of Threads with chunk_size = 32)\n") +
   # scale_y_continuous(trans='log') +
   scale_y_continuous() +
   # scale_y_log10() +
@@ -202,7 +203,7 @@ p2 <- ggplot(df_plot_32, aes(x=x, y=t, fill=cat)) +
 (p2 = p2 + scale_fill_grey(start = 0.9, end = 0.2))
 
 multiplot(p2, cols=1)
-# dev.off ();
+ dev.off ();
 
 # Chunk size 64.
 # df_plot_64 <- subset(df_data, y== 64 | y == 0)
@@ -216,7 +217,7 @@ View(df_plot_64)
 # View(df_plot)
 
 #pdf(filename="evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-32.pdf", width=1200, height=800);
-
+png("img64.png")
 p3 <- ggplot(df_plot_64, aes(x=x, y=t, fill=cat)) + 
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar(aes(ymin=t-t_sd, ymax=t+t_sd),
@@ -228,7 +229,7 @@ p3 <- ggplot(df_plot_64, aes(x=x, y=t, fill=cat)) +
   #scale_fill_manual(name="Experiment", # Legend label, use darker colors
   #           breaks=c("OMP+OFF", "OMP"),
   #           labels=c("OMP+OFF", "OMP"), values=c("#494949", "#927080", "#B6B6B6")) +
-  ggtitle("Offloading Analysis for gemm (Number of Threads with chunk_size = 64)\n") +
+  ggtitle("(Number of Threads with chunk_size = 64)\n") +
   # scale_y_continuous(trans='log') +
   scale_y_continuous() +
   # scale_y_log10() +
@@ -239,8 +240,8 @@ p3 <- ggplot(df_plot_64, aes(x=x, y=t, fill=cat)) +
 (p3 = p3 + scale_fill_grey(start = 0.9, end = 0.2))
 
 multiplot(p3, cols=1)
-dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-64.pdf");
-# dev.off ();
+#dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-64.pdf");
+ dev.off ();
 
 # Chunk size 128.
 #df_plot_128 <- subset(df_data, y== 128 | y == 0)
@@ -254,7 +255,8 @@ View(df_plot_128)
 # View(df_plot)
 
 #pdf(filename="evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-128.pdf", width=1200, height=800);
-
+png("img128.png")
+Offloading("image.Offloading", width = 531, height = 413)
 p4 <- ggplot(df_plot_128, aes(x=x, y=t, fill=cat)) + 
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar(aes(ymin=t-t_sd, ymax=t+t_sd),
@@ -266,7 +268,7 @@ p4 <- ggplot(df_plot_128, aes(x=x, y=t, fill=cat)) +
   #scale_fill_manual(name="Experiment", # Legend label, use darker colors
   #           breaks=c("OMP+OFF", "OMP"),
   #           labels=c("OMP+OFF", "OMP"), values=c("#494949", "#927080", "#B6B6B6")) +
-  ggtitle("Offloading Analysis for gemm (Number of Threads with chunk_size = 128)\n") +
+  ggtitle("(Number of Threads with chunk_size = 128)\n") +
   # scale_y_continuous(trans='log') +
   scale_y_continuous() +
   # scale_y_log10() +
@@ -277,8 +279,8 @@ p4 <- ggplot(df_plot_128, aes(x=x, y=t, fill=cat)) +
 (p4 = p4 + scale_fill_grey(start = 0.9, end = 0.2))
 
 multiplot(p4, cols=1)
-dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-128.pdf");
-# dev.off ();
+#dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-128.pdf");
+ dev.off ();
 
 # Chunk size 256.
 # df_plot_256 <- subset(df_data, y== 256 | y == 0)
@@ -292,7 +294,7 @@ View(df_plot_256)
 # View(df_plot)
 
 #pdf(filename="evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-256.pdf", width=1200, height=800);
-
+png("img256.png")
 p5 <- ggplot(df_plot_256, aes(x=x, y=t, fill=cat)) + 
   geom_bar(stat="identity", position="dodge") +
   geom_errorbar(aes(ymin=t-t_sd, ymax=t+t_sd),
@@ -305,7 +307,7 @@ p5 <- ggplot(df_plot_256, aes(x=x, y=t, fill=cat)) +
   #scale_fill_manual(name="Experiment", # Legend label, use darker colors
   #           breaks=c("OMP+OFF", "OMP"),
   #           labels=c("OMP+OFF", "OMP"), values=c("#494949", "#927080", "#B6B6B6")) +
-  ggtitle("Offloading Analysis for gemm (Number of Threads with chunk_size = 256)\n") +
+  ggtitle("(Number of Threads with chunk_size = 256)\n") +
   # scale_y_continuous(trans='log') +
   scale_y_continuous() +
   # scale_y_log10() +
@@ -317,6 +319,6 @@ p5 <- ggplot(df_plot_256, aes(x=x, y=t, fill=cat)) +
 
 multiplot(p5, cols=1)
 #####dev.copy2pdf(file = "evaluating-chunk_size-benchmark-gemm-data-extralarge_dataset-num_threads-1-a-24-dynamic-chunk_size-256.pdf");
-# dev.off ();
+ dev.off ();
 
 
